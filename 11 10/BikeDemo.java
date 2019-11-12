@@ -11,6 +11,12 @@ public class BikeDemo{
 			bike.speedUp();
 			System.out.println(bike.getSpeed());
 		}
+		System.out.println("下坡:");
+		for (int i = 0; i < 22; i++) {
+			bike.speedUp();
+			System.out.println(bike.getCurrentSpeed());
+		}
+		
 		System.out.println("上坡:");
 		for (int i = 0; i < 22; i++) {
 			bike.speedDown();
