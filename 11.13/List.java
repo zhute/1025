@@ -26,6 +26,25 @@ public class List{
 		array[0]=c;
 		size++;
 	}
+	void popFront(){
+		if(size==0){
+			System.out.println("空了");
+			return;
+		}
+		for(int i=1;i<=size-1;i++){
+			array[i-1]=array[i];
+		}
+		array[size]=0;
+		size--;
+	}
+	
+	public void insert(int x,int index){
+		for(int i=size-1;i>=index;i--){
+			array[i+1]=array[i];
+		}
+		array[index]=x;
+	}
+		
 	
 	@Override
 	public String toString(){
@@ -40,6 +59,7 @@ public class List{
 		list.pushFront(20);
 		list.pushFront(30);
 		list.pushFront(10);
+		list.insert(55,2);
 		System.out.println(list);
 	}
 }
