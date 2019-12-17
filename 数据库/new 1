@@ -1,0 +1,22 @@
+
+查询
+select id,name,3 from exam;
+
+select id,name,chinese+math from exam;
+
+select id,name,chinese+math 总分 from exam;
+
+select name,chinese,math from exam where chinese < math;
+
+查询同学各门成绩，依次按数学降序，语文升序的方式显示
+ select name,math,chinese from exam
+    -> order by math desc,chinese
+	
+	查询数学成绩是58 59 98 99 的人
+select name, math from exam where math in (58, 59, 98, 99);
+
+
+update exam set math = 60, chinese = 70where name = '小孩';
+
+
+update exam set math = math + 30 order by chinese + math LIMIT 3;
